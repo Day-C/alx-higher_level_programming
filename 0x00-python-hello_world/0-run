@@ -1,3 +1,2 @@
 #!/bin/bash
-python3 $PYFIL:q:q
-:wqE
+python3 $PYFILE
