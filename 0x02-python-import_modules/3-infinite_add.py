@@ -10,5 +10,4 @@ if __name__ == "__main__":
         for i in range(1, len(argv)):
             n = int(argv[i])
             sum_ += n
-        print("{}".format(sum_))
-
+    print("{}".format(sum_))
