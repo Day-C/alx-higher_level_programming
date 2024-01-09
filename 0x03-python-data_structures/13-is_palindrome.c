@@ -39,8 +39,8 @@ int is_palindrome(listint_t **head)
 
 	count = node_count(*head);
 	current = *head;
-	ptr = malloc(sizeof(int) * count);
-	a = count;
+	ptr = malloc(sizeof(int) * (count - 1));
+	a = count - 1;
 	while (current)
 	{
 		ptr[a] = current->n;
@@ -50,11 +50,11 @@ int is_palindrome(listint_t **head)
 	}
 	temp = NULL;
 	i = 0;
+	current = *head;
 	while (current)
 	{
 		if (current->n != ptr[i])
 		{
-			free_listint(*head);
 			free(ptr);
 			return (-1);
 		}
