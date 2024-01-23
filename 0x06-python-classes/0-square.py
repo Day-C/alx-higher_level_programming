@@ -1,4 +1,3 @@
 #!/usr/bin/python3
 class Square:
-    #create empty clsaa
-    pass
+    pass #create empty clasa
