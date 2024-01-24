@@ -2,8 +2,13 @@
 '''create a square class'''
 
 
-class Square():
-    '''initialize size'''
+class Square:
+    '''Structure a square.'''
+
     def __init__(self, size):
-        '''Initialize private attribute size.'''
+        '''Initialise
+
+        Args:
+            size of new square.
+        '''
         self._size = size

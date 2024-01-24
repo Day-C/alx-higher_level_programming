@@ -14,3 +14,6 @@ try:
     print(my_square.__size)
 except Exception as e:
     print(e)
+
+print(type(my_square)) 
+print(my_square.dict_)
