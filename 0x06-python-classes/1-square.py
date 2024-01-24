@@ -12,4 +12,4 @@ class Square:
         Args:
             size (int): of new square.
         '''
-        self._size = size
+        self.__size = size
