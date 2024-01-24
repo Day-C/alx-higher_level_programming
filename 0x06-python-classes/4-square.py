@@ -5,7 +5,7 @@
 
 class Square:
     '''Structure class.'''
-    
+
 
     def __init__(self, size=0):
         '''Initialize variables.
