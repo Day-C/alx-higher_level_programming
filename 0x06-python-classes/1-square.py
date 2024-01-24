@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 
-'''create a square class'''
+'''Create a square class.'''
 
 
 class Square:
     '''Structure a square.'''
 
     def __init__(self, size):
-        '''Initialise
+        '''Initialization.
 
         Args:
-            size of new square.
+            size (int): of new square.
         '''
         self._size = size
