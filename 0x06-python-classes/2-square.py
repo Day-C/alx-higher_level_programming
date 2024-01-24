@@ -5,12 +5,14 @@ class Square:
     '''Structure the class.'''
 
     def __init__(self, size=0):
-        '''Try clause cheks if size is an integer.'''
-        try:
-            size += 0
-        except:
+        '''Initialize a new square.
+
+       Args:
+           size (int): size of square.
+        '''
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
-        self._Size = size
+        self.__Size = size
         
