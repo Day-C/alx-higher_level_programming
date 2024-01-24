@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+
 '''Create class square.'''
+
 
 class Square:
     '''Structure the class.'''
@@ -7,7 +9,7 @@ class Square:
     def __init__(self, size=0):
         '''Initialize a new square.
 
-       Args:
+        Args:
            size (int): size of square.
         '''
         if not isinstance(size, int):
