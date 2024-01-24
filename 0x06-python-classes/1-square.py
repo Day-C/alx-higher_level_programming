@@ -5,5 +5,5 @@
 class Square():
     '''initialize size'''
     def __init__(self, size):
-        self._Square_size = size
+        self._size = size
         '''iniltialize valeus'''
