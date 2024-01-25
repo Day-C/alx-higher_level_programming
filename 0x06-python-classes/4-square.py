@@ -10,7 +10,6 @@ class Square:
     def __init__(self, size=0):
         '''Initialize variables.
         Arg: size'''
-
         if not isinstance(size, int):
             raise TypeError("size most be an integer")
         if size < 0:
@@ -30,4 +29,4 @@ class Square:
         self.__size = value
     def area(self):
         '''Method returs the area of that square.'''
-        return (self.__size * self.__size)
+    return (self.__size * self.__size)
