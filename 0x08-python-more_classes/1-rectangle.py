@@ -12,6 +12,7 @@ class Rectangle:
             width (int): value for attribute witdth
             height (int): valuse for attriute height
         '''
+
         if not isinstance(width, int):
             if not isinstance(width, float):
                 raise TypeError("width must be an integer")
@@ -32,7 +33,7 @@ class Rectangle:
     def width(self):
         '''Retirive width.'''
 
-        return (self.width)
+        return (self.__width)
 
     @width.setter
     def width(self, value):
@@ -50,7 +51,7 @@ class Rectangle:
     def height(self):
         '''Retrive height.'''
 
-        return (self.height)
+        return (self.__height)
 
     @height.setter
     def height(self, value):
