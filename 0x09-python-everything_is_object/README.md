@@ -1,0 +1,2 @@
+	Indepth study of classes
+
