@@ -71,7 +71,7 @@ class Rectangle:
 
         if self.__height == 0 or self.__width == 0:
             return (0)
-        return(self.__height * self.__width)
+        return (self.__height * self.__width)
 
     def perimeter(self):
         '''Perimeter of rectangle.'''
@@ -83,12 +83,11 @@ class Rectangle:
     def __str__(self):
         '''String representation of instance'''
 
-        string = []
         i = 0
         j = 1
         while i < (self.__height * self.__width):
-            print("#", end = "")
-            if j == self.__width and i < (self.__height *self.__width):
+            print("#", end="")
+            if j == self.__width and i < (self.__height * self.__width):
                 j = 0
                 print()
             i += 1
@@ -98,4 +97,3 @@ class Rectangle:
 
     def __del__(self):
         print("Bye rectangle...")
-
