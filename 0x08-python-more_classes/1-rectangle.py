@@ -20,7 +20,7 @@ class Rectangle:
         if width < 0:
             raise ValueError("width must be >= 0")
         if not isinstance(height, int):
-            if not isinstance(heigh, float):
+            if not isinstance(height, float):
                 raise TypeError("height must be an integer")
             height = int(height)
         if height < 0:
