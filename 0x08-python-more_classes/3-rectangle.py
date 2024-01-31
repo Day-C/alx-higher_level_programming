@@ -83,7 +83,6 @@ class Rectangle:
     def __str__(self):
         '''String representation of instance'''
 
-        string = []
         i = 0
         j = 1
         while i < (self.__height * self.__width):
