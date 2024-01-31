@@ -1,42 +1,64 @@
-The test module
-===============
+===========================
+How to USe 0-add_integer.py
+==========================
 
-using ``ad_integer``
+The module defiles an integer addition functin ``add_integer(a, b=98)``.
 
-Thstext file describes  ``add_integer`` function and also contain test cases
+Usage
+====
 
-import module
+The ``add_integer()`` function returns the results of the addition of two integer values.
+
+::
+     import module
 	>>> add_integer = __import__('0-add_integer').add_integer
 
      case0: When eigther inputs is not an integer
-	
+::	
 	>>> add_integer("text", 10)
 	Traceback (most recent call last):
 	TypeError: a must be an integer
 
      case1: Whenn b is a string
-
+::
 	>>> add_integer(1, "text")
 	Traceback (most recent call last):
 	TypeError: b must be an integer
 
      case2: When a is an float point number
-
+::
 	>>> add_integer(12.59, 2)
 	14
 
      case3: When b is a float point number
-
+::
 	>>> add_integer(10, 12.59)
 	22
 
      case4: When a None value is passed
-
+::
 	>>> add_integer(None)
 	Traceback (most recent call last):
 	TypeError: a must be an integer
 
      case5: When b is not passed
-
+::
 	>>> add_integer(10)
 	108
+
+     case6: When a is negative
+::
+	>>> add_integer(2, -5)
+	-3
+
+     case7: when a is an infinity 
+::
+	>>> add_integer(float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+     case8: when b is an infinity
+::
+	>>> add_integer(2, float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer

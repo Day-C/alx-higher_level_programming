@@ -1,0 +1,50 @@
+===========================
+How to USe 4-print_square.py
+===========================
+
+The file contain one function ``print_square``  which take 1 argument
+	size (int)
+
+
+	>>> print_square = __import__('4-print_square').print_square
+
+
+Number
+=====
+
+::
+
+	>>> print_square(5)
+	#####
+	#####
+	#####
+	#####
+	#####
+
+if size is a float
+
+::
+
+	>>> print_square(5.2)
+	#####
+	#####
+	#####
+	#####
+	#####
+
+if size is Zero
+
+::
+
+	>>> print_square(-5)
+	Traceback (most recent call last):
+	ValueError: size must be >= 0
+
+Non_Number
+=========
+
+::
+
+	>>> print_square("k")
+	Traceback (most recent call last):
+	TypeError: size must be an integer

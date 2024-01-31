@@ -1,0 +1,49 @@
+==========================
+How to Use 3-say_my_name.py
+==========================
+
+This file has one function ``say_my_name`` this function takes 2 arguments
+	first_name (string)
+	last_name (string)
+	Return: a string of <first_name> + <last_name>
+
+Number
+=====
+
+::
+
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+if a number in inserted as an argument
+
+	>>> say_my_name(5, "james")
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+
+	>>> say_my_name("Moses", 10)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+Non_Number
+=========
+
+::
+
+	>>> say_my_name("john", "king")
+	My name is john king
+
+The function also handles when only the first name is passed
+
+::
+
+	>>> say_my_name("mark")
+	My name is mark 
+
+if first argument is not passed
+
+::
+
+	>>> say_my_name(None, "luke")
+	Traceback (most recent call last):
+	TypeError: first_name must be a string

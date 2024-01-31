@@ -1,0 +1,19 @@
+================================
+How to USe 5-text_indentation.py
+================================
+
+This file contain one function ``text_indentation``which takes one argument
+	text (str)
+	The function preats a newnow when it encounters either ('.', '?' or  ':')
+
+
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Number
+=====
+
+::
+
+	>>> text_indentation(562533)
+	Traceback (most recent call last):
+	TypeError: text must be a string
