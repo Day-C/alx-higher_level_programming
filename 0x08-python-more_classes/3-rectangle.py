@@ -21,7 +21,7 @@ class Rectangle:
         if width < 0:
             raise ValueError("width must be >= 0")
         if not isinstance(height, int):
-            if not isinstance(heigh, float):
+            if not isinstance(height, float):
                 raise TypeError("height must be an integer")
             height = int(height)
         if height < 0:
@@ -87,12 +87,12 @@ class Rectangle:
         i = 0
         j = 1
         while i < (self.__height * self.__width):
-            print ("#", end = "")
+            print("#", end = "")
             if j == self.__width:
                 if i == (self.__height * self.__width) - 1:
                     break
                 j = 0
-                print ()
+                print()
             i += 1
             j += 1
         return ("")
