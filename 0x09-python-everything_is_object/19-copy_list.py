@@ -1,8 +1,3 @@
-#!/usr/bin/python3
-'''Define a function.'''
-
-
+#!/usr/bin/python
 def copy_list(l):
-    '''Function returns a copy of a string.'''
-
     return (l[:])
