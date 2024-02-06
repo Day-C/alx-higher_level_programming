@@ -4,6 +4,6 @@ import json
 
 
 def from_json_string(my_str):
-        '''Convert json string to original object.'''
+    '''Convert json string to original object.'''
 
-        return (json.loads(my_str))
+    return (json.loads(my_str))
