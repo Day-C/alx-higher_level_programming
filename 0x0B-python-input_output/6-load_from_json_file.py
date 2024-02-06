@@ -7,6 +7,5 @@ def load_from_json_file(filename):
     '''Function creates objects from content of json file.'''
 
     with open(filename, encoding="utf-8") as f:
-        for line in f:
-            f.read(json.load(line))
-            return (f)
+            data = f.read()
+            return (json.loads(data))
