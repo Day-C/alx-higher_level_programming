@@ -5,4 +5,4 @@
 def lookup(obj):
     '''Returns info about an object.'''
 
-    return (list((obj.__dict__)))
+    return (list(dir(obj)))
