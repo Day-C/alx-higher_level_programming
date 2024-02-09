@@ -40,8 +40,12 @@ class Square:
         '''Method prints a square with '#' characters.'''
         j = 0
         if self.__size != 0:
+            if not isinstance(self.__position[1], int):
+                raise TypeError("position must be a tuple of 2 positive integers")
             if self.__position[1] > 0:
+                print("")
                 for i in range(self.__size):
+                    print("{}".format(" " * self.__position[0]), end="")
                     for j in range(self.__size):
                         print("#", end="")
                     print("")
@@ -53,6 +57,7 @@ class Square:
                     print("")
         else:
             print("")
+
     @property
     def position(self):
         '''Method gets position.'''
