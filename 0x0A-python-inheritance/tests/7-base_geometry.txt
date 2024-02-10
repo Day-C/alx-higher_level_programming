@@ -50,3 +50,33 @@ we will be taking a better look on how the class works
 
 	>>> base_geo.integer_validator("age", 21)
 
+::
+
+	>>> base_geo.integer_validator("age", (2,))
+	Traceback (most recent call last):
+	TypeError: age must be an integer
+
+::
+
+	>>> base_geo.integer_validator("age", True)
+	Traceback (most recent call last):
+	TypeError: age must be an integer
+
+::
+
+	>>> base_geo.integer_validator("age", [2])
+	Traceback (most recent call last):
+	TypeError: age must be an integer
+
+::
+
+	>>> base_geo.integer_validator("age", {5, 3})
+	Traceback (most recent call last):
+	TypeError: age must be an integer
+
+::
+
+	>>> base_geo.integer_validator("age", None)
+	Traceback (most recent call last):
+	TypeError: value is required
+
