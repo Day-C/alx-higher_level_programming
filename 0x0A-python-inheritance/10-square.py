@@ -9,4 +9,5 @@ class Square(Rectangle):
     def __init__(self, size):
         '''Initialize attributes.'''
 
+        super().integer_validator("size", size)
         super().__init__(size, size)
