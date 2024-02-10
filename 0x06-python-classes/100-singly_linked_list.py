@@ -9,8 +9,8 @@ class Node():
         '''Initialize instance variables.'''
         if not isinstance(data, int):
             raise TypeError("data must be aninteger")
-        if next_node != None:
-            if issubclass(type(next_node), object):
+        if next_node is not None:
+            if isinstance(type(next_node), object):
                 raise TypeError("next_node must be a Node object")
         self.__data = data
         self.__next_node = nest_node
@@ -35,12 +35,13 @@ class Node():
     @next_node.setter
     def next_node(self, value):
         '''Method setts next_node.'''
-        if value != None:
-            if not issubclass(type(value), object):
+        if value is not None:
+            if not isinstance(type(value), object):
                 raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
-class SinglyLinkedList():
+
+class SinglyLinkedList(Node):
     '''Define a new class singlylinkedlist.'''
 
     def __init__(self):
@@ -50,13 +51,14 @@ class SinglyLinkedList():
     def sorted_insert(self, value):
         '''Insert item in sortedorder'''
         self.__head.append(value)
-        
 
     def __str__(self):
         '''Method prints content of class.'''
-        lis = sorted(self.__head)
-        for i in range(len(lis)):
-            if i < len(lis)-1:
-                print("{}".format(lis[i]))
-        return str(format(lis[i]))
-
+        if len(self.__head) > 1:
+            lis = sorted(self.__head)
+            for i in range(len(lis)):
+                if i < len(lis)-1:
+                    print("{}".format(lis[i]))
+            return str(format(lis[i]))
+        else:
+            return("")
