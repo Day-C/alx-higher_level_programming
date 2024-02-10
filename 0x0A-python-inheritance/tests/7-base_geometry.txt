@@ -1,0 +1,33 @@
+=============================
+How To Use 7-base_geometry.py
+=============================
+
+Using BaseGeometry:
+==================
+
+The BaseGeometry class has two methods(area() and integer_validator(name, value))
+we will be taking a better look on how the class works
+
+::
+        >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+	>>> bg = BaseGeometry()
+
+::	case where both agruments are strings
+
+	>>> bg.integer_validator("name", "frances")
+	Traceback (most recent call last):
+	TypeError: name must be an integer
+
+::	case where name is a negative integer
+
+	>>> bg.integer_validator("45", -56)
+	Traceback (most recent call last):
+	ValueError: 45 must be greater than 0
+
+::
+
+	>>> bg.integer_validator("age", 0)
+	Traceback (most recent call last):
+	ValueError: age must be greater than 0
+	
