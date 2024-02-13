@@ -4,8 +4,8 @@
 
 class Base:
     '''Base of all other classes.'''
-
     __nb_objects = 0
+
     def __init__(self, id=None):
         '''Initialize instance vars
         Args:
