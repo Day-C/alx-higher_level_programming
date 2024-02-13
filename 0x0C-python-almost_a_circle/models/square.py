@@ -10,12 +10,8 @@ class Square(Rectangle):
         '''Initialize instance variables.'''
 
         super().__init__(size, size, x, y, id)
-        self.size = size
-        self.x = x
-        self.y = y
-        self.id = id
 
     def __str__(self):
         '''String representation of class.'''
 
-        return ("[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.size))
+        return ("[Square] ({}) {}/{} - {}".format(self.width, self.x, self.y, self.width))
