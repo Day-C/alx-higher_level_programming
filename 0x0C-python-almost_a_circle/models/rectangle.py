@@ -14,33 +14,34 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
         super().__init__(id)
-        if not isinstance(width, int):
+        if type(self.__width) is not int:
             raise TypeError("width must be an integer")
-        if not isinstance(height, int):
+        if type(self.__height) is not int:
             raise TypeError("height must be an integer")
-        if not isinstance(x, int):
+        if type(self.__x) is not int:
             raise TypeError("x must be an integer")
-        if not isinstance(y, int):
+        if type(self.__y) is not int:
             raise TypeError("y must be an integer")
-        if width <= 0:
+        if self.__width <= 0:
             raise ValueError("width must be > 0")
-        if height <= 0:
+        if self.__height <= 0:
             raise ValueError("height must be > 0")
-        if x < 0:
+        if self.__x < 0:
             raise ValueError("x must be >= 0")
-        if y < 0:
-            raise ValueError("y must be >= 0")
+        if self.__y < 0:
+            raise ValueError ("y must be >= 0")
 
     @property
     def width(self):
         '''Get width.'''
+
         return self.__width
 
     @width.setter
     def width(self, value):
         '''Set width.'''
 
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
@@ -49,13 +50,14 @@ class Rectangle(Base):
     @property
     def height(self):
         '''Get height.'''
+
         return self.__height
 
     @height.setter
     def height(self, value):
         '''Set height.'''
 
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
@@ -70,7 +72,7 @@ class Rectangle(Base):
     def x(self, value):
         '''Set x.'''
 
-        if not isinstance(value, int):
+        if type(value) is not  int:
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be > 0")
@@ -85,7 +87,7 @@ class Rectangle(Base):
     def y(self, value):
         '''Set y.'''
 
-        if isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be > 0")
@@ -117,17 +119,27 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         '''Method updates instance attributes.'''
 
-        try:
-            if args[0]:
-                self.id = args[0]
-            if args[1]:
-                self.__width = args[1]
-            if args[2]:
-                self.__height = args[2]
-            if args[3]:
-                self.__x = args[3]
-            if args[4]:
-                self.__y = args[4]
-        except:
-            pass
+        if len(args):
+            for i, arg in enumerate(args):
+                if i == 0:
+                    self.id = arg
+                elif i == 1:
+                    self.__width = arg
+                elif i == 2:
+                    self.__height = arg
+                elif i == 3:
+                    self.__x = arg
+                elif i == 4:
+                    self.__y = arg
+        else:
+            if id in kwargs:
+                self.id = kwargs[id]
+            elif width in kwargs:
+                self.__width = kwargs[width]
+            elif heith in kwargs:
+                self.__height = kwargs[height]
+            elif x in kwargs:
+                self.__x = kwargs[x]
+            elif y in kwargs:
+                self.__y = kwargs[y]
 
