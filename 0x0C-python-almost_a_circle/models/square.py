@@ -27,3 +27,27 @@ class Square(Rectangle):
         '''Set size.'''
 
         super().__init__(value, value)
+
+    def update(self, *args, **kwargs):
+        '''Updates instance varaibles.'''
+
+        if len(args):
+            for i, arg in enumerate(args):
+                if i == 0:
+                    self.id = arg
+                if i == 1:
+                    self.width = arg
+                if i == 2:
+                    self.x = arg
+                if i == 3:
+                    self.y = arg
+        else:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "size" in kwargs:
+                self.width = kwargs["size"]
+                self.height = kwargs["size"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
