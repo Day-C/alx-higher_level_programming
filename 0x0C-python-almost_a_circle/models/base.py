@@ -19,6 +19,7 @@ class Base:
         elif id is not None:
             self.id = id
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         '''Represent contents of list_dictionaries in json string.'''
 
