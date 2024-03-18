@@ -1,5 +1,5 @@
--- script cretes table if a current daabase
-CREATE TABLE first_table(
-	id int
+-- script cretes table if a current database
+CREATE TABLE IF NOT EXISTS first_table(
+	id INT,
 	name VARCHAR(256)
-	);
+);
